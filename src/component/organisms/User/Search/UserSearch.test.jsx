@@ -1,9 +1,10 @@
-import {MockProvider} from '@apollo/react-testing';
+import {MockedProvider} from '@apollo/react-testing';
 import {render} from '@testing-library/react';
+// import {act} from 'react-dom/test-utils';
 import React from 'react';
 import UserSearch from './UserSearch';
 import findUseQuery from './user-search.graphql';
-it('should render loading state initially', () => {
+it('should render loading state initially',  () => {
   const mocks = [{
     request: {
       query: findUseQuery,
@@ -12,16 +13,16 @@ it('should render loading state initially', () => {
       }
     },
     result: {
-      data: {}
+      loading: true
     }
   }];
-  const component = render(
-    <MockProvider mocks={mocks} addTypename={false}>
+  const {container} = render(
+    <MockedProvider mocks={mocks} addTypename={false}>
       <UserSearch />
-    </MockProvider>
+    </MockedProvider>
   );
-  const tree = component.toJSON();
-  expect(tree.children).toContain('Loading...');
+
+  expect(container.getElementsByTagName('h3')[0].innerHTML).toEqual('Search for user information');
 });
 it('should render error', () => {
 
