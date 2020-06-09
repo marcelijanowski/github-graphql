@@ -1,6 +1,5 @@
 import {MockedProvider} from '@apollo/react-testing';
 import {render} from '@testing-library/react';
-// import {act} from 'react-dom/test-utils';
 import React from 'react';
 import UserSearch from './UserSearch';
 import findUseQuery from './user-search.graphql';
