@@ -1,0 +1,24 @@
+query findUseQuery($userName: String!, $limit: Int = 50, $commentsLimit: Int = 5 ) {
+  search(first: $limit,  query: $userName, type: USER) {
+    userCount
+    edges {
+      node {
+        ... on User {
+          login
+          avatarUrl
+          commitComments(first: $commentsLimit) {
+            edges {
+              node {
+                ... on Comment {
+                  createdAt
+                  bodyText
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

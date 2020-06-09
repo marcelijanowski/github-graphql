@@ -1,0 +1,10 @@
+{
+  "testRegex": "((\\.|/*.)(test))\\.jsx?$",
+  "setupFilesAfterEnv": [
+    "./test.setup.js"
+  ],
+  "transform": {
+    "\\.(gql|graphql)$": "jest-transform-graphql",
+    ".*": "babel-jest"
+  }
+}
