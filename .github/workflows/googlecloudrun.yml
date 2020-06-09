@@ -1,4 +1,4 @@
-ame: Deploy the application Graphql to Google Cloud Run
+name: Deploy the application Graphql to Google Cloud Run
 on:
   push:
     branches:
