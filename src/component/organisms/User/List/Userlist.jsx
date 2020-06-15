@@ -7,6 +7,7 @@ const UserList = ({loading, error, data}) => {
       {error && <div>Error</div>}
       {data && <div>
         {data.search.userCount > 0 && <h3>Total number: {data.search.userCount}</h3>}
+        {data.search.userCount === 0 && !loading && <h2>No users found</h2>}
         <table>
           {data && data.search.edges.map((user, i) => (
             <tr key={i}>
