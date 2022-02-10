@@ -62,7 +62,7 @@
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "jest-transform-graphql": "^2.1.0",
     "mini-css-extract-plugin": "^0.7.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "postcss-loader": "^3.0.0",
     "react-dom": "16.8.6",
     "react-test-renderer": "16.8.6",
